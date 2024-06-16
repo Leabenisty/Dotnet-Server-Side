@@ -17,6 +17,7 @@ namespace Solid.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            // connection to DB
             optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=EmployeeSystemDB");
             optionsBuilder.LogTo(message => Debug.WriteLine(message));  
         }
